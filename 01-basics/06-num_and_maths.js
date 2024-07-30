@@ -21,6 +21,11 @@ console.log(Math.ceil(4.2)); // it will also round the value but take upper valu
 console.log(Math.floor(4.2)); // it will also round the value but take lower value
 console.log(Math.max(9,22,69,1)); // return max value
 console.log(Math.min(87,3,22,1)); // return min value
+console.log(Math.random()); // it will give random number (bet 0 & 1)
 
-console.log()
+const max = 20
+const min = 10
+console.log(Math.floor(Math.random() * (max-min+1)) +min );
+// this will return value above 10 and using floor we will get accurate value
+
 // for more maths function just google or go to mdn document
