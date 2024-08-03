@@ -4,7 +4,7 @@
 
 const mySym = Symbol("Key1") // declaring symbol to use in object literals
 
-//object literals
+//object literals // it is non singleton object
 const jsUser = {
     name: "Hemant",
     [mySym]: "mykey1", // symbol can not accessed using "." and write it in [] 
