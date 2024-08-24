@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- https://jsonformatter.org/ -->
+    <!-- by this website we can see api in different forms-->
+
+    <script>
+// this is the api which we want to use         
+    const requestUrl = 'https://api.github.com/users/hemant0912'
+
+// https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+// this is documentation of xmlhttp request i.e. how to use it         
+    const xhr = new XMLHttpRequest();
+// we have to store it in a variable and create with new i.e. object type
+
+ xhr.open('GET', requestUrl)    
+
+ xhr.onreadystatechange = function(){
+    console.log(xhr.readyState)  // this is used to monitor continously
+    if(xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText)
+        console.log(data);
+// go in console to see all the info for the api 
+        
+// so to find out any data from the api we can find out like this
+    console.log(data.company);
+            
+    }
+ }          
+ xhr.send() // open is called after send == .send 
+
+
+        
+       
+    </script>
+</body>
+</html>
